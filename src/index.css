@@ -1,0 +1,312 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cae2fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Component Container */
+.component-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Label */
+.form-label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Form Select */
+.form-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  color: #495057;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Company Dropdown */
+.company-dropdown {
+  width: calc(100% - 40px); /* Adjust the width to leave space from both sides */
+  max-width: 1200px; /* Optionally, limit the maximum width */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #007bff; /* Primary color border */
+  background-color: #e9f0f7; /* Pale blue background color */
+  color: #333;
+  transition: border-color 0.3s ease;
+  margin: 0 auto; /* Center the dropdown */
+  display: block;
+}
+
+/* Modal */
+.modal {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal[open] {
+  display: flex;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.primary:hover {
+  background-color: #0056b3;
+}
+
+button.secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+button.secondary:hover {
+  background-color: #545b62;
+}
+
+/* List Group Item */
+.list-group-item {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Success Message */
+.text-success {
+  color: #28a745;
+}
+
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Chat Bubble */
+.chat {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 80%;
+  margin-bottom: 10px;
+}
+
+.question .chat-bubble {
+  background-color: #dcf8c6;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.response .chat-bubble {
+  background-color: #e2e2e2;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+/* Chatbot Button */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.chatbot:hover {
+  transform: scale(1.1);
+}
+
+.chatbot.open .chatbot-content {
+  display: block;
+}
+
+/* Chatbot Content */
+.chatbot-content {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.chatbot-content-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Details Card */
+.details-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.details-card .ask-question {
+  margin-bottom: 20px;
+}
+
+.details-card button {
+  margin-top: 10px;
+}
+
+.ask-question-button {
+  font-size: 0.9rem;
+  color: #007bff;
+  background-color: #e9f0f7; /* Pale blue background */
+  border: 1px solid #007bff; /* Border color same as text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ask-question-button:hover,
+.ask-question-button:focus {
+  background-color: #e9f0f7; /* Keep background same on hover/focus */
+  color: #007bff; /* Keep color same on hover/focus */
+}
+
+/* #root */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
